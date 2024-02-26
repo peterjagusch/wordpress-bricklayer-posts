@@ -1,0 +1,399 @@
+/*--------------------------------------------------------------
+## Bricklayer
+--------------------------------------------------------------*/ 
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.bricklayer-column {
+	padding: 0.5vw;
+}
+.hidden {
+	display: none;
+}
+.bricklayer {
+	margin: 0.5vw;
+	min-width: 100%;
+}
+.category-bricklayer {
+	min-width: initial;
+}
+.brick .brick-layout::after, .brick-item::before {
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#8C000000', GradientType=0);
+	content: '';
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+.brick-grid a:after {
+	background: rgba(0,0,0,0.4);
+	content: '';
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+.brick-details {
+	z-index: 5;
+	padding: 0!important;
+}
+.brick {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	color: rgba(255, 255, 255, .6);
+	margin-bottom: 1vw;
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.brick.large:hover, .brick.medium:hover, .brick .smallbrick:hover {
+	opacity: 0.9;
+}
+
+.brick-image{
+	transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+}
+.brick.large .brick-image:hover, .brick.medium .brick-image:hover{
+	transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02); /* IE 9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.02, M12=0, M21=0, M22=1.02, SizingMethod='auto expand')"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.02, M12=0, M21=0, M22=1.02, SizingMethod='auto expand'); /* IE6 and 7 */ 
+}
+.large {
+	background: #2799d8;
+	height: 51vw;
+}
+.medium {
+	background: #5622cc;
+	height: 51vw;
+}
+.smallx2 {
+	height: 51vw;
+}
+.bricklayer-column .smallbrick {
+	height: 11vw;
+	min-width: 48%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.smallx2 .smallbrick {
+	height: 100%;
+	min-width: 48%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.smallx2 .smallbrick.one {
+	background: #4e4e4e;
+	margin-right: 0.5vw;
+}
+.smallx2 .smallbrick.two {
+	background: #8f8f8f;
+	margin-left: 0.5vw;
+}
+.brick .brick-layout{
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	position: relative;
+}
+div.profile img {
+	border-radius: 200px;
+	overflow: hidden;
+	margin: 0 auto 10px;
+	width: 60px;
+}
+ul.meta {
+	font-size: 12px;
+	color: #000;
+	text-align: center;
+	margin: 0 0 20px;
+}
+ul.meta li {
+	list-style: none;
+	padding: 0px;
+	border-radius: 2px;
+	margin: 0px;
+}
+.brick-layout .inner {
+	padding: 10px;
+	bottom: 0;
+	position: absolute;
+}
+
+.brick .inner {
+	padding: 20px 0 0;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,0.7) 100%);
+	background-image: -o-linear-gradient(top, transparent 0%, rgba(0,0,0,0.7) 100%);
+	background-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+	background-repeat: repeat-x;
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#8C000000', GradientType=0);
+}
+.brick .color-set .inner, .brick .user-link .inner {
+	background-image: none;
+	background: none;
+}
+.brick h2, .brick-grid h2 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	color: #fff;
+	font-size: 20px;
+	margin: 0;
+	padding: 0px 30px 15px 15px;
+	overflow: hidden;
+	line-height: 24px;
+}
+.brick h3, .brick-grid h3 {
+	border-top: 1px solid rgba(255,255,255,0.25);
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	color: #fff;
+	font-size: 10px;
+	white-space: nowrap;
+	padding: 10px 30px 10px 15px;
+	margin: 0;
+	display: none;
+}
+.brick > div.brick-layout:hover h3, .brick-grid:hover h3 {
+	white-space: normal;
+}
+.brick h3 p, .brick-grid h3 p {
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 14px;
+	font-weight: 500;
+}
+.smallbrick h3 {
+	display: none;
+}
+#more_posts {
+	color: #fff;
+	background-color: #999;
+	font-size: 18px;
+	line-height: 40px;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	width: 50%;
+	max-width: 200px;
+	cursor: pointer;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	border-radius: 6px;
+	background-image: -webkit-linear-gradient(top, #888 0%, #999 100%);
+	background-image: -o-linear-gradient(top, #888 0%, #999 100%);
+	background-image: linear-gradient(to bottom, #888 0%, #999 100%);
+	background-repeat: repeat-x;
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#8C000000', GradientType=0);
+}
+#more_posts:hover {
+	background: #1D7BCF;
+}
+#more_posts.disabled {
+	background: transparent;
+	cursor: default;
+	border: 3px dashed lightgray;
+	color: lightgray;
+	border-radius: 0;
+	box-shadow: none;
+	max-width: none;
+	width: initial;
+	margin: 0 10px
+}
+#more_posts.disabled span {
+	display: none;
+}
+#more_posts.disabled::before {
+	content: 'No more posts';
+}
+img.hero {
+	margin: 0 auto 5px;
+	text-align: center;
+	display: initial;
+}
+.brick .vc_gitem-post-data {
+	margin-bottom: 0!important;
+}
+.vc_grid-item .brick {
+	margin: 0!important;
+}
+.vc_gitem-zone.brick {
+	display: block;
+}
+.vc_gitem-zone.brick:hover {
+	opacity: 0.9;
+}
+
+/*--------------------------------------------------------------
+## Custom field edits
+--------------------------------------------------------------*/ 
+.user-link .inner {
+	display: none;
+}
+.user-link.brick-image:after {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+## Responsive edits
+--------------------------------------------------------------*/ 
+@media screen and (max-width:767px) {
+.brick h2, .brick-grid h2 {
+	font-size: 17px;
+	padding: 3px 30px 16px 15px;
+	overflow: hidden;
+	line-height: 20px;
+}
+.brick h3, .brick-grid h3 {
+	font-size: 12px;
+	padding: 15px 30px 15px 15px;
+	line-height: 15px;
+}
+.brick h3 p, .brick-grid h3 p {
+	font-size: 12px;
+}
+}
+
+@media screen and (min-width:640px) {
+.bricklayer-column-sizer {
+	width: 50%
+}
+.large {
+	height: 49vw;
+}
+.category-bricklayer .large {
+	height: 350px;
+}
+.medium, .smallx2 {
+	height: 24vw;
+}
+.bricklayer {
+	margin: 0.5vw;
+}
+.bricklayer-column {
+	padding: 0.5vw;
+}
+.brick {
+	margin-bottom: 1vw;
+}
+.smallx2 .smallbrick.one {
+	margin-right: 0.5vw;
+}
+.smallx2 .smallbrick.two {
+	margin-left: 0.5vw;
+}
+}
+
+@media screen and (min-width:980px) {
+.bricklayer-column-sizer {
+	width: 33.333%
+}
+.large {
+	height: 30.6vw;
+}
+.category-bricklayer .large {
+	height: 350px;
+}
+.medium, .smallx2 {
+	height: 15vw;
+}
+.bricklayer {
+	margin: 0.3vw;
+}
+.bricklayer-column {
+	padding: 0.3vw;
+}
+.brick {
+	margin-bottom: 0.6vw;
+}
+.smallx2 .smallbrick.one {
+	margin-right: 0.3vw;
+}
+.smallx2 .smallbrick.two {
+	margin-left: 0.3vw;
+}
+}
+
+@media screen and (min-width:1200px) {
+.bricklayer-column-sizer {
+	width: 33.3%
+}
+.large {
+	height: 30.6vw;
+}
+.category-bricklayer .large {
+	height: 400px;
+}
+.medium, .smallx2 {
+	height: 15vw;
+}
+.bricklayer {
+	margin: 0.3vw;
+}
+.bricklayer-column {
+	padding: 0.3vw;
+}
+.brick {
+	margin-bottom: 0.6vw;
+}
+.smallx2 .smallbrick.one {
+	margin-right: 0.3vw;
+}
+.smallx2 .smallbrick.two {
+	margin-left: 0.3vw;
+}
+}
+
+@media screen and (min-width:1600px) {
+.bricklayer-column-sizer {
+	width: 25%
+}
+.large {
+	height: 24.4vw;
+}
+.category-bricklayer .large {
+	height: 400px;
+}
+.medium, .smallx2 {
+	height: 12vw;
+}
+.bricklayer {
+	margin: 0.2vw;
+}
+.bricklayer-column {
+	padding: 0.2vw;
+}
+.brick {
+	margin-bottom: 0.4vw;
+}
+.smallx2 .smallbrick.one {
+	margin-right: 0.2vw;
+}
+.smallx2 .smallbrick.two {
+	margin-left: 0.2vw;
+}
+}

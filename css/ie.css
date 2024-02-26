@@ -1,0 +1,69 @@
+
+* {
+  box-sizing: border-box;
+}
+.bricklayer {
+ -moz-column-count: 4;
+ -moz-column-gap: 13px;
+ -webkit-column-count: 4;
+ -webkit-column-gap: 13px;
+ column-count: 4;
+ column-gap: 13px;
+ margin:13px;
+ position: relative;
+ display: block;
+}
+.category-bricklayer.bricklayer {
+ -moz-column-count: 3;
+ -moz-column-gap: 13px;
+ -webkit-column-count: 3;
+ -webkit-column-gap: 13px;
+ column-count: 3;
+ column-gap: 13px;
+ margin:13px;
+ position: relative;
+ display: block;
+}
+.brick{
+	width: 100%;
+	margin: 0;
+	 display: inline-flex;
+}
+
+.brick.smallx2{
+ -moz-column-count: 2;
+ -moz-column-gap: 13px;
+ -webkit-column-count: 2;
+ -webkit-column-gap: 13px;
+ column-count: 2;
+ column-gap: 13px;
+}
+.brick.smallx2 .smallbrick{
+width: 100%;
+display: inline-flex;
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+	.bricklayer {
+	 -moz-column-count: 3;
+	 -webkit-column-count: 3;
+	 column-count: 3;
+	}
+	
+}
+
+@media (min-width:480px) and (max-width:767px) {
+	.bricklayer {
+	 -moz-column-count: 2;
+	 -webkit-column-count: 2;
+	 column-count: 2;
+	}	
+}
+
+@media screen and (max-width:479px) {
+	.bricklayer {
+	 -moz-column-count: 1;
+	 -webkit-column-count: 1;
+	 column-count: 1;
+	}	
+}
